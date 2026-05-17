@@ -10,6 +10,9 @@ importers:
 
   web:
     dependencies:
+      '@proappstore/sdk':
+        specifier: ^0.2.0
+        version: 0.2.1
       react:
         specifier: ^19.2.5
         version: 19.2.6
@@ -50,6 +53,9 @@ packages:
   '@emnapi/wasi-threads@1.2.1':
     resolution: {integrity: sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w==}
 
+  '@freeappstore/sdk@0.5.1':
+    resolution: {integrity: sha512-zsQ8gQ+HkjCOXXrvjQQjgZP3OH1v0L37768HVlITkNuEZoswRyXcuowSE06HN1w6EgcJk6vPvfa20Qoc+XDz3g==}
+
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
 
@@ -74,6 +80,9 @@ packages:
 
   '@oxc-project/types@0.129.0':
     resolution: {integrity: sha512-3oz8m3FGdr2nDXVqmFUw7jolKliC4MoyXYIG2c7gpjBnzUWQpUGIYcXYKxTdTi+N2jusvt610ckTMkxdwHkYEg==}
+
+  '@proappstore/sdk@0.2.1':
+    resolution: {integrity: sha512-SVnZng5FpmPtpBWAtrJULZwO+/Q0r8iPpXEqEeSI2cQc83YE9bcSmordTQJvsQLekII5U3CvLyl/YUl/KOG7AA==}
 
   '@rolldown/binding-android-arm64@1.0.0':
     resolution: {integrity: sha512-TWMZnRLMe63C2Lhyicviu7ZHaU4kxa6PS3rofvc9GmcvptzNN11BcfQ4Sl7MwTOsisQoa2keB/EBdNCAnUo8vA==}
@@ -520,6 +529,8 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
+  '@freeappstore/sdk@0.5.1': {}
+
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -547,6 +558,10 @@ snapshots:
     optional: true
 
   '@oxc-project/types@0.129.0': {}
+
+  '@proappstore/sdk@0.2.1':
+    dependencies:
+      '@freeappstore/sdk': 0.5.1
 
   '@rolldown/binding-android-arm64@1.0.0':
     optional: true

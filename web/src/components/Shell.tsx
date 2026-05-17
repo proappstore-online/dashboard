@@ -19,7 +19,7 @@ export function Shell({ children }: ShellProps) {
           {/* Desktop sidebar */}
           <aside className="hidden lg:flex lg:min-h-[calc(100dvh-4rem)] lg:flex-col lg:gap-5 lg:rounded-[2rem] lg:border lg:border-[var(--line)] lg:bg-[var(--glass-strong)] lg:p-6 lg:shadow-[var(--shadow-soft)] lg:backdrop-blur-xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--line-strong)] bg-[var(--glass)] px-3 py-1 text-[0.65rem] font-bold uppercase tracking-[0.22em] text-[var(--accent-deep)]">
-              APPNAME
+              dashboard
             </div>
 
             <div className="mt-auto text-[0.65rem] text-[var(--muted)]">

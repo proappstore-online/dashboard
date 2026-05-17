@@ -1,7 +1,7 @@
 {
-  "name": "APPNAME",
-  "short_name": "APPNAME",
-  "description": "Free APPNAME app — part of FreeAppStore",
+  "name": "dashboard",
+  "short_name": "dashboard",
+  "description": "Free dashboard app — part of FreeAppStore",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
