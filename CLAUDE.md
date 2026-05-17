@@ -1,12 +1,12 @@
-# dashboard
+# Pro Dashboard
 
-A free app on FreeAppStore.
+Account management for ProAppStore — profile, subscription, preferences, delete account.
 
-- Subdomain: `dashboard.freeappstore.online`
+- Subdomain: `dashboard.proappstore.online`
 - Dev: `pnpm install && pnpm dev`
 - Build: `pnpm build`
 - Deploy: `git push origin main` (auto-deploys via Cloudflare Pages)
 
-Free, MIT-licensed, no tracking. For platform conventions, read
-https://freeappstore.online/skills.md
+For platform conventions, read
+https://proappstore.online/skills.md
 before writing or changing anything.
