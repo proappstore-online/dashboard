@@ -119,7 +119,7 @@ function HomeView({ user, sub }: { user: User; sub: Subscription | null }) {
   const isPro = sub?.status === 'active'
   return (
     <div className="flex flex-col gap-6">
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--glass)] p-6">
+      <div className="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
         <div className="flex items-center gap-4">
           <img src={user.avatarUrl ?? ''} alt="" className="h-16 w-16 rounded-full" />
           <div>
@@ -132,11 +132,11 @@ function HomeView({ user, sub }: { user: User; sub: Subscription | null }) {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-xl border border-[var(--line)] bg-[var(--glass)] p-4">
+        <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] p-4">
           <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">Plan</p>
           <p className="mt-1 text-lg font-bold text-[var(--ink)]">{isPro ? 'Pro' : 'Free'}</p>
         </div>
-        <div className="rounded-xl border border-[var(--line)] bg-[var(--glass)] p-4">
+        <div className="rounded-xl border border-[var(--line)] bg-[var(--panel)] p-4">
           <p className="text-xs font-semibold uppercase tracking-wider text-[var(--muted)]">User ID</p>
           <p className="mt-1 font-mono text-sm text-[var(--ink)]">{user.id}</p>
         </div>
@@ -149,7 +149,7 @@ function ProfileView({ user }: { user: User }) {
   return (
     <div className="flex flex-col gap-4">
       <h2 className="text-lg font-bold text-[var(--ink)]">Profile</h2>
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--glass)] p-6">
+      <div className="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
         <div className="flex flex-col gap-4">
           <div>
             <label className="text-xs font-semibold uppercase text-[var(--muted)]">Username</label>
@@ -190,7 +190,7 @@ function SubscriptionView({ sub }: { sub: Subscription | null }) {
       <h2 className="text-lg font-bold text-[var(--ink)]">Subscription</h2>
 
       {isPro ? (
-        <div className="rounded-2xl border border-[var(--line)] bg-[var(--glass)] p-6">
+        <div className="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
           <div className="flex items-center gap-2">
             <span className="rounded-full bg-[var(--accent)] px-2 py-0.5 text-xs font-bold text-white">PRO</span>
             <span className="text-sm font-semibold text-[var(--ink)]">Active</span>
@@ -203,7 +203,7 @@ function SubscriptionView({ sub }: { sub: Subscription | null }) {
           )}
           <button
             onClick={handleManage}
-            className="mt-4 rounded-xl border border-[var(--line)] px-4 py-2 text-sm font-medium text-[var(--ink)] hover:bg-[var(--glass-hover)]"
+            className="mt-4 rounded-xl border border-[var(--line)] px-4 py-2 text-sm font-medium text-[var(--ink)] hover:bg-[var(--panel-hover)]"
           >
             Manage billing
           </button>
@@ -228,14 +228,14 @@ function PreferencesView({ prefs, onSave }: { prefs: { theme: string; notificati
   return (
     <div className="flex flex-col gap-4">
       <h2 className="text-lg font-bold text-[var(--ink)]">Preferences</h2>
-      <div className="rounded-2xl border border-[var(--line)] bg-[var(--glass)] p-6">
+      <div className="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
         <div className="flex flex-col gap-5">
           <div>
             <label className="text-sm font-medium text-[var(--ink)]">Theme</label>
             <select
               value={prefs.theme}
               onChange={e => onSave({ theme: e.target.value })}
-              className="mt-1 block w-full rounded-xl border border-[var(--line)] bg-[var(--glass)] px-3 py-2 text-sm text-[var(--ink)]"
+              className="mt-1 block w-full rounded-xl border border-[var(--line)] bg-[var(--panel)] px-3 py-2 text-sm text-[var(--ink)]"
             >
               <option value="system">System</option>
               <option value="light">Light</option>
