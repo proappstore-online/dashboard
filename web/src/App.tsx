@@ -82,12 +82,12 @@ export default function App() {
         <div className="flex items-center gap-3">
           <img src={user.avatarUrl ?? ''} alt="" className="h-8 w-8 rounded-full border border-[var(--line)]" />
           <span className="text-sm font-medium text-[var(--ink)]">{user.login}</span>
-          <button onClick={() => app.auth.signOut()} className="text-xs text-[var(--muted)] hover:text-[var(--ink)]">Sign out</button>
+          <button onClick={() => app.auth.signOut()} className="text-xs text-[var(--muted)] hover:text-[var(--ink)] py-2">Sign out</button>
         </div>
       </div>
 
       {/* Nav tabs */}
-      <div className="flex gap-1 border-b border-[var(--line)] pb-px">
+      <div className="flex gap-1 border-b border-[var(--line)] pb-px overflow-x-auto">
         {(['home', 'profile', 'subscription', 'preferences', 'danger'] as View[]).map(v => (
           <button
             key={v}
@@ -235,7 +235,7 @@ function PreferencesView({ prefs, onSave }: { prefs: { theme: string; notificati
             <select
               value={prefs.theme}
               onChange={e => onSave({ theme: e.target.value })}
-              className="mt-1 block w-full rounded-xl border border-[var(--line)] bg-[var(--panel)] px-3 py-2 text-sm text-[var(--ink)]"
+              className="mt-1 block w-full rounded-xl border border-[var(--line)] bg-[var(--panel)] px-3 py-3 text-sm text-[var(--ink)]"
             >
               <option value="system">System</option>
               <option value="light">Light</option>
