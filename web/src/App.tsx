@@ -211,7 +211,7 @@ function SubscriptionView({ sub }: { sub: Subscription | null }) {
       ) : (
         <div className="rounded-2xl border border-dashed border-[var(--accent)] bg-[var(--accent-soft)] p-6">
           <h3 className="text-lg font-bold text-[var(--ink)]">Upgrade to Pro</h3>
-          <p className="mt-1 text-sm text-[var(--muted)]">$9/month — unlock real-time rooms, AI, cron, custom domains, and more.</p>
+          <p className="mt-1 text-sm text-[var(--muted)]">$5/month — unlock real-time rooms, AI, cron, custom domains, and more.</p>
           <button
             onClick={handleUpgrade}
             className="mt-4 rounded-xl bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white"
