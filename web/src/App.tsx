@@ -61,6 +61,10 @@ export default function App() {
     return (
       <div className="flex min-h-[100dvh] flex-col items-center justify-center gap-6 px-4">
         <div className="text-center">
+          <a href="https://proappstore.online" aria-label="ProAppStore" className="mb-5 inline-flex items-center gap-3 font-extrabold">
+            <img src="/favicon.svg" width="48" height="48" alt="" />
+            <span>Pro<span className="text-[var(--accent)]">App</span>Store</span>
+          </a>
           <h1 className="display-font text-4xl font-bold text-[var(--ink)]">Pro Dashboard</h1>
           <p className="mt-2 text-[var(--muted)]">Manage your ProAppStore account, subscription, and preferences.</p>
         </div>
@@ -78,7 +82,10 @@ export default function App() {
     <div className="mx-auto flex min-h-[100dvh] max-w-3xl flex-col px-4 py-6">
       {/* Header */}
       <div className="flex items-center justify-between pb-6">
-        <h1 className="display-font text-2xl font-bold text-[var(--ink)]">Dashboard</h1>
+        <div className="flex items-center gap-2">
+          <a href="https://proappstore.online" aria-label="ProAppStore"><img src="/favicon.svg" width="32" height="32" alt="" /></a>
+          <h1 className="display-font text-2xl font-bold text-[var(--ink)]">Dashboard</h1>
+        </div>
         <div className="flex items-center gap-3">
           <img src={user.avatarUrl ?? ''} alt="" className="h-8 w-8 rounded-full border border-[var(--line)]" />
           <span className="text-sm font-medium text-[var(--ink)]">{user.login}</span>
