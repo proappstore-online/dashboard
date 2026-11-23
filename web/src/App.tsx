@@ -180,14 +180,6 @@ function ProfileView({ user }: { user: User }) {
 function SubscriptionView({ sub }: { sub: Subscription | null }) {
   const isPro = sub?.status === 'active'
 
-  const handleUpgrade = async () => {
-    await app.subscription.openCheckout({
-      priceId: 'price_pro_monthly',
-      successUrl: window.location.origin + '?upgraded=1',
-      cancelUrl: window.location.origin,
-    })
-  }
-
   const handleManage = async () => {
     await app.subscription.openPortal(window.location.origin)
   }
@@ -216,15 +208,9 @@ function SubscriptionView({ sub }: { sub: Subscription | null }) {
           </button>
         </div>
       ) : (
-        <div className="rounded-2xl border border-dashed border-[var(--accent)] bg-[var(--accent-soft)] p-6">
-          <h3 className="text-lg font-bold text-[var(--ink)]">Upgrade to Pro</h3>
-          <p className="mt-1 text-sm text-[var(--muted)]">$5/month — unlock real-time rooms, AI, cron, custom domains, and more.</p>
-          <button
-            onClick={handleUpgrade}
-            className="mt-4 rounded-xl bg-[var(--accent)] px-6 py-2.5 text-sm font-semibold text-white"
-          >
-            Subscribe
-          </button>
+        <div className="rounded-2xl border border-[var(--line)] bg-[var(--panel)] p-6">
+          <h3 className="text-lg font-bold text-[var(--ink)]">Free trial</h3>
+          <p className="mt-1 text-sm text-[var(--muted)]">Everything on ProAppStore is free during the trial. No subscription needed.</p>
         </div>
       )}
     </div>
